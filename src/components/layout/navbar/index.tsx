@@ -62,11 +62,11 @@ const StyledNavItem = styled(Button, {
     shouldForwardProp: (prop) => prop !== "active",
 })<{ active: boolean }>(({ active }) => ({
     textTransform: 'none',
-    color: active ? colors.primary.main : colors.gray[400],
+    color: active ? colors.secondary.main : colors.gray[400],
     backgroundColor: active ? colors.gray[300] : 'transparent',
     '&:hover': {
         backgroundColor: colors.gray[300],
-        color: 'black'
+        color: active ? colors.secondary.main : 'black'
     },
     fontFamily: 'var(--font-euclid-circular-b), sans-serif',
     borderRadius: '8px',
@@ -107,7 +107,7 @@ export const Navbar = () => {
         return (
             <Link key={item.key} href={item.href} style={{ textDecoration: 'none' }}>
                 <StyledNavItem active={active}>
-                    {Icon && <Icon sx={{ mr: 1, fontSize: 20, color: active ? colors.primary.main : colors.gray[400] }} />}
+                    {Icon && <Icon sx={{ mr: 1, fontSize: 20, color: active ? colors.secondary.main : colors.gray[400] }} />}
                     {item.title}
                 </StyledNavItem>
             </Link>
@@ -116,7 +116,7 @@ export const Navbar = () => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" sx={{ backgroundColor: colors.primary.main }}>
+            <AppBar position="static" sx={{ backgroundColor: colors.secondary.main }}>
                 <Container maxWidth="xl">
                     <Toolbar sx={{ justifyContent: 'space-between', px: 0, height: '82px' }}>
                         <Link href="/" style={{ textDecoration: 'none' }}>
@@ -142,17 +142,17 @@ export const Navbar = () => {
                                 </StyledIcon>
                             </StyledTooltip>
                             <StyledTooltip title="Search Activity" placement="bottom" arrow>
-                                <StyledIcon>
+                                <StyledIcon disabled>
                                     <SearchStatusIcon sx={{ color: "white", fontSize: "36px" }} />
                                 </StyledIcon>
                             </StyledTooltip>
                             <StyledTooltip title="Payout Center" placement="bottom" arrow>
-                                <StyledIcon>
+                                <StyledIcon disabled>
                                     <PayoutIcon sx={{ color: "white", fontSize: "36px" }} />
                                 </StyledIcon>
                             </StyledTooltip>
                             <StyledTooltip title="Marketplace" placement="bottom" arrow>
-                                <StyledIcon>
+                                <StyledIcon disabled>
                                     <MarketPlaceIcon sx={{ color: "white", fontSize: "36px" }} />
                                 </StyledIcon>
                             </StyledTooltip>

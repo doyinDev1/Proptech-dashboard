@@ -1,11 +1,8 @@
 "use client";
 
 import { Box, IconButton, styled } from "@mui/material";
-import { Heading, MessageIcon, PropertyListingsSection } from "@/components";
+import { Heading, MessageIcon, PropertyListingsSection, SalesOverviewCard, ListingsOverviewCard, UsersOverviewCard } from "@/components";
 import { colors } from "@/styles";
-import { SalesOverviewCard } from "@/components";
-import { ListingsOverviewCard } from "@/components/ui/ListingOverviewCard";
-import { UsersOverviewCard } from "@/components/ui/UsersOverviewCard";
 
 const StyledBox = styled(Box)({
     display: 'flex',
@@ -52,7 +49,7 @@ export const Dashboard = () => {
             </StyledBox>
             <PropertyListingsSection />
             <CTAContainer>
-                 <StyledIconButton>
+                <StyledIconButton>
                     <MessageIcon />
                 </StyledIconButton>
             </CTAContainer>
