@@ -15,6 +15,7 @@ import {
     Tooltip
 } from '@mui/material';
 import {
+    BudgetingDialog,
     CalculatorIcon,
     CalendarIcon,
     LogoIcon,
@@ -93,6 +94,8 @@ const StyledTooltip = styled(({ className, ...props }: React.ComponentProps<type
 
 export const Navbar = () => {
     const [showUserProfile, setShowUserProfile] = useState(false);
+    const [showBudgetingDialog, setShowBudgetingDialog] = useState(false);
+
     const pathname = usePathname();
 
     const renderNavItem = useCallback((item: { key: string; title: string; href: string; icon: string }) => {
@@ -127,7 +130,7 @@ export const Navbar = () => {
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
 
                             <StyledTooltip title="Budgeting" placement="bottom" arrow>
-                                <StyledIcon>
+                                <StyledIcon onClick={() => setShowBudgetingDialog(true)}>
                                     <CalculatorIcon sx={{ fontSize: "36px" }} />
                                 </StyledIcon>
                             </StyledTooltip>
@@ -183,6 +186,10 @@ export const Navbar = () => {
                     </Toolbar>
                 </Container>
             </Box>
+            <BudgetingDialog
+                open={showBudgetingDialog}
+                onClose={() => setShowBudgetingDialog(false)}
+            />
         </Box>
     );
 };
