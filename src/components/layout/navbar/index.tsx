@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -58,7 +58,7 @@ const StyledAvatar = styled(Avatar, {
     }
 }));
 
-const StyledNavItem = styled(Box, {
+const StyledNavItem = styled(Button, {
     shouldForwardProp: (prop) => prop !== "active",
 })<{ active: boolean }>(({ active }) => ({
     textTransform: 'none',
@@ -73,12 +73,7 @@ const StyledNavItem = styled(Box, {
     padding: '9px 32px',
     fontWeight: active ? 600 : 400,
     fontSize: 14,
-    transition: 'all 0.2s ease',
-    cursor: 'pointer',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    userSelect: 'none'
+    transition: 'all 0.2s ease'
 }));
 
 const StyledTooltip = styled(({ className, ...props }: React.ComponentProps<typeof Tooltip>) => (
@@ -102,11 +97,6 @@ export const Navbar = () => {
     const [showUserProfile, setShowUserProfile] = useState(false);
     const [showBudgetingDialog, setShowBudgetingDialog] = useState(false);
     const [showCalendarWidget, setShowCalendarWidget] = useState(false);
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const pathname = usePathname();
 
@@ -123,8 +113,6 @@ export const Navbar = () => {
             </Link>
         );
     }, [pathname]);
-
-    if (!mounted) return <Box sx={{ flexGrow: 1, height: '146px' }} />;
 
     return (
         <Box sx={{ flexGrow: 1 }}>
