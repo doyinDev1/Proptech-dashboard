@@ -21,6 +21,7 @@ import {
     MarketPlaceIcon,
     PayoutIcon,
     SearchStatusIcon,
+    UserProfileHover,
 } from '@/components';
 import { colors } from '@/styles';
 import { navItems } from './nav-items';
@@ -161,7 +162,10 @@ export const Navbar = () => {
                                     D
                                 </StyledAvatar>
                                 {showUserProfile && (
-                                    <h1>Dylan Frank</h1>
+                                    <UserProfileHover
+                                        name="Dylan Frank"
+                                        email="dylanfran96@gmail.com"
+                                    />
                                 )}
                             </Box>
                         </Box>
