@@ -297,9 +297,10 @@ export const CalendarWidget: React.FC<CalendarWidgetProps> = ({
                                 date.getDate() === selectedDate.getDate() &&
                                 date.getMonth() === selectedDate.getMonth() &&
                                 date.getFullYear() === selectedDate.getFullYear();
-                            const isToday = date.getDate() === new Date().getDate() &&
-                                date.getMonth() === new Date().getMonth() &&
-                                date.getFullYear() === new Date().getFullYear();
+                            const today = new Date();
+                            const isToday = date.getDate() === today.getDate() &&
+                                date.getMonth() === today.getMonth() &&
+                                date.getFullYear() === today.getFullYear();
                             const isOutside = date.getMonth() !== currentDate.getMonth();
                             const isFirstDayOfMonth = date.getDate() === 1;
 
