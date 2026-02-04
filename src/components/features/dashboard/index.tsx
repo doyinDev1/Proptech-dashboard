@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, styled } from "@mui/material";
-import { Heading } from "@/components";
+import { Heading, PropertyListingsSection } from "@/components";
 import { colors } from "@/styles";
 import { SalesOverviewCard } from "@/components";
 import { ListingsOverviewCard } from "@/components/ui/ListingOverviewCard";
@@ -28,6 +28,7 @@ export const Dashboard = () => {
                     <UsersOverviewCard />
                 </Box>
             </StyledBox>
+            <PropertyListingsSection />
         </Box>
     )
 }
