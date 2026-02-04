@@ -4,6 +4,7 @@ import { Box, styled } from "@mui/material";
 import { Heading } from "@/components";
 import { colors } from "@/styles";
 import { SalesOverviewCard } from "@/components";
+import { ListingsOverviewCard } from "@/components/ui/ListingOverviewCard";
 
 const StyledBox = styled(Box)({
     display: 'flex',
@@ -22,6 +23,7 @@ export const Dashboard = () => {
                     <SalesOverviewCard />
                 </Box>
                 <Box sx={{ flex: { xs: '1 1 100%', md: '1 1 calc(32% - 12px)' }, display: "flex", flexDirection: "column", gap: "20px" }}>
+                    <ListingsOverviewCard />
                 </Box>
             </StyledBox>
         </Box>
