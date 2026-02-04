@@ -1,7 +1,7 @@
 "use client";
 
-import { Box, styled } from "@mui/material";
-import { Heading, PropertyListingsSection } from "@/components";
+import { Box, IconButton, styled } from "@mui/material";
+import { Heading, MessageIcon, PropertyListingsSection } from "@/components";
 import { colors } from "@/styles";
 import { SalesOverviewCard } from "@/components";
 import { ListingsOverviewCard } from "@/components/ui/ListingOverviewCard";
@@ -13,6 +13,28 @@ const StyledBox = styled(Box)({
     gap: "21px",
     flexWrap: 'wrap',
     alignItems: 'center'
+});
+
+const CTAContainer = styled(Box)({
+    position: 'fixed',
+    bottom: '212px',
+    right: '40px',
+    zIndex: 3,
+});
+
+
+const StyledIconButton = styled(IconButton)({
+    backgroundColor: colors.secondary[700],
+    border: '1px solid #FFFFFF33',
+    color: colors.white,
+    padding: '16px',
+    borderRadius: '50%',
+    width: '58px',
+    height: '58px',
+    '&:hover': {
+        backgroundColor: colors.secondary[700],
+        color: colors.white,
+    }
 });
 
 export const Dashboard = () => {
@@ -29,6 +51,11 @@ export const Dashboard = () => {
                 </Box>
             </StyledBox>
             <PropertyListingsSection />
+            <CTAContainer>
+                 <StyledIconButton>
+                    <MessageIcon />
+                </StyledIconButton>
+            </CTAContainer>
         </Box>
     )
 }
