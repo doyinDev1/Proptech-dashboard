@@ -136,19 +136,16 @@ export const Navbar = () => {
                                     <CalendarIcon sx={{ color: "white", fontSize: "36px" }} />
                                 </StyledIcon>
                             </StyledTooltip>
-
                             <StyledTooltip title="Search Activity" placement="bottom" arrow>
                                 <StyledIcon>
                                     <SearchStatusIcon sx={{ color: "white", fontSize: "36px" }} />
                                 </StyledIcon>
                             </StyledTooltip>
-
                             <StyledTooltip title="Payout Center" placement="bottom" arrow>
                                 <StyledIcon>
                                     <PayoutIcon sx={{ color: "white", fontSize: "36px" }} />
                                 </StyledIcon>
                             </StyledTooltip>
-
                             <StyledTooltip title="Marketplace" placement="bottom" arrow>
                                 <StyledIcon>
                                     <MarketPlaceIcon sx={{ color: "white", fontSize: "36px" }} />
