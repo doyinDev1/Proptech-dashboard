@@ -5,6 +5,7 @@ export const colors = {
     },
     secondary: {
         main: "#105B48",
+        blue: "#4545FE",
         100: "#176D58",
         200: "#E4E4E4",
         300: "#14B8A6",
