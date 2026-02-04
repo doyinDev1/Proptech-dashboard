@@ -17,7 +17,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${euclidCircularB.variable}`}>
         <Navbar />
-
         {children}
       </body>
     </html>
