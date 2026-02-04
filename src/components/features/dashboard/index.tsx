@@ -5,6 +5,7 @@ import { Heading } from "@/components";
 import { colors } from "@/styles";
 import { SalesOverviewCard } from "@/components";
 import { ListingsOverviewCard } from "@/components/ui/ListingOverviewCard";
+import { UsersOverviewCard } from "@/components/ui/UsersOverviewCard";
 
 const StyledBox = styled(Box)({
     display: 'flex',
@@ -24,6 +25,7 @@ export const Dashboard = () => {
                 </Box>
                 <Box sx={{ flex: { xs: '1 1 100%', md: '1 1 calc(32% - 12px)' }, display: "flex", flexDirection: "column", gap: "20px" }}>
                     <ListingsOverviewCard />
+                    <UsersOverviewCard />
                 </Box>
             </StyledBox>
         </Box>
