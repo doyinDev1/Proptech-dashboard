@@ -11,7 +11,7 @@ export const ListingsOverviewCard = () => {
     return (
         <MetricsOverviewCard
             title="Listings Overview"
-            icon={<HomeIcon sx={{ fontSize: 24, color: colors.secondary.main }} />}
+            icon={<HomeIcon sx={{ fontSize: 24, color: colors.secondary.blue }} />}
             metrics={listingsMetrics}
         />
     );

@@ -86,9 +86,9 @@ const StyledButton = styled(Button)({
     border: "1px solid",
     borderColor: colors.gray[550],
     color: colors.primary.main,
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: "var(--font-euclid-circular-b), sans-serif",
-    fontWeight: 400,
+    fontWeight: 500,
     padding: "12px 24px",
     marginTop: "-15px"
 });

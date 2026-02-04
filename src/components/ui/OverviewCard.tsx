@@ -56,7 +56,7 @@ export const OverviewCard = ({ title, icon, viewAll = true, children }: Overview
                         href="#"
                         sx={{
                             textDecoration: "none",
-                            color: colors.secondary.main,
+                            color: colors.secondary.blue,
                             fontSize: "14px",
                             fontWeight: 500,
                             "&:hover": {
