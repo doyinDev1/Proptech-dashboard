@@ -102,7 +102,7 @@ const StyledBox = styled(Box)({
 
 const bars = [
     { key: "category1", color: colors.secondary.blue, name: "Total Inflow" },
-    { key: "category2", color: colors.secondary[100], name: "MRR" },
+    { key: "category2", color: colors.primary.green, name: "MRR" },
     { key: "category3", color: colors.error[500], name: "GMV" },
 ];
 
@@ -124,7 +124,7 @@ const metrics = {
             value: "₦110,000,000.00",
             label: "MRR",
             trend: { value: "1.8%", isPositive: true },
-            color: colors.secondary[100]
+            color: colors.primary.green
         },
         {
             value: "₦150,000,000.00",
@@ -152,7 +152,7 @@ const metrics = {
             value: "₦65,000,000.00",
             label: "MRR",
             trend: { value: "2.1%", isPositive: true },
-            color: colors.secondary[100]
+            color: colors.primary.green
         },
         {
             value: "₦320,000,000.00",
@@ -180,7 +180,7 @@ const metrics = {
             value: "₦50,000,000.00",
             label: "MRR",
             trend: { value: "2.5%", isPositive: true },
-            color: colors.secondary[100]
+            color: colors.primary.green
         },
         {
             value: "₦200,000,000.00",

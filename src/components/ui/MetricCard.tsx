@@ -61,7 +61,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({
     color,
     trendColor
 }) => {
-    const defaultPositiveColor = colors.secondary[100];
+    const defaultPositiveColor = colors.primary.green;
     const defaultNegativeColor = colors.error[500];
 
     const positiveColor = trendColor?.positive || defaultPositiveColor;
