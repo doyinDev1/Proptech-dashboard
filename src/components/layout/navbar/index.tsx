@@ -18,6 +18,7 @@ import {
     BudgetingDialog,
     CalculatorIcon,
     CalendarIcon,
+    CalendarWidget,
     LogoIcon,
     MarketPlaceIcon,
     PayoutIcon,
@@ -95,6 +96,7 @@ const StyledTooltip = styled(({ className, ...props }: React.ComponentProps<type
 export const Navbar = () => {
     const [showUserProfile, setShowUserProfile] = useState(false);
     const [showBudgetingDialog, setShowBudgetingDialog] = useState(false);
+    const [showCalendarWidget, setShowCalendarWidget] = useState(false);
 
     const pathname = usePathname();
 
@@ -135,7 +137,7 @@ export const Navbar = () => {
                                 </StyledIcon>
                             </StyledTooltip>
                             <StyledTooltip title="Calendar" placement="bottom" arrow>
-                                <StyledIcon>
+                                <StyledIcon onClick={() => setShowCalendarWidget(!showCalendarWidget)}>
                                     <CalendarIcon sx={{ color: "white", fontSize: "36px" }} />
                                 </StyledIcon>
                             </StyledTooltip>
@@ -189,6 +191,10 @@ export const Navbar = () => {
             <BudgetingDialog
                 open={showBudgetingDialog}
                 onClose={() => setShowBudgetingDialog(false)}
+            />
+            <CalendarWidget
+                open={showCalendarWidget}
+                onClose={() => setShowCalendarWidget(false)}
             />
         </Box>
     );
